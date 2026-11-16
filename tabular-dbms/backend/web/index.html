@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Таблична · робочий журнал</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="workspace" id="workspace">
+    <aside class="sidebar" aria-label="Бази та таблиці">
+      <header><div class="brand">Таблична.</div><p class="edition">РОБОЧИЙ ЖУРНАЛ / 01</p></header>
+      <section class="database-section">
+        <label class="section-label" for="databases">БАЗА ДАНИХ</label>
+        <select id="databases"><option value="">Виберіть базу…</option></select>
+        <button id="new-database">+ Нова база</button>
+      </section>
+      <section class="table-section">
+        <h2 class="section-label">ТАБЛИЦІ</h2>
+        <nav id="tables" aria-label="Таблиці поточної бази"></nav>
+      </section>
+      <footer class="sidebar-actions">
+        <button id="new-table">+ Нова таблиця</button>
+        <button id="import">Імпортувати JSON…</button>
+        <button id="export">Експортувати базу…</button>
+        <input id="import-file" type="file" accept=".json,application/json" hidden>
+      </footer>
+    </aside>
+    <main>
+      <div class="heading"><h1 id="table-title">Ваші дані, по порядку</h1><button id="refresh">Оновити</button></div>
+      <p class="description" id="database-title">Створіть базу або виберіть її ліворуч.</p>
+      <div class="toolbar" aria-label="Дії з таблицею">
+        <button class="primary" id="add-row">+ Додати рядок</button>
+        <button id="edit-row">Редагувати</button>
+        <button id="deduplicate">Прибрати повтори</button>
+        <button class="delete-action" id="delete-table">Видалити таблицю</button>
+      </div>
+      <div class="table-frame" id="table-frame" tabindex="0" aria-label="Дані таблиці, прокручувана область">
+        <table id="data-table" aria-label="Дані"><thead></thead><tbody></tbody></table>
+        <p class="empty" id="empty">Виберіть або створіть таблицю ліворуч.</p>
+      </div>
+      <p class="description" id="counts">Зміни зберігаються автоматично.</p>
+    </main>
+  </div>
+  <div class="status" id="status" role="status" aria-live="polite">Підключення…</div>
+  <dialog id="editor" aria-labelledby="dialog-title">
+    <form id="editor-form" novalidate>
+      <h2 id="dialog-title"></h2>
+      <fieldset id="editor-fields"></fieldset>
+      <p class="error" id="form-error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" id="cancel">Скасувати</button><button type="submit" class="primary" id="save">Зберегти</button></div>
+    </form>
+  </dialog>
+  <noscript>Увімкніть JavaScript для роботи з базами даних.</noscript>
+</body>
+</html>

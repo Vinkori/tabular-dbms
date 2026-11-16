@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "b47a5bcc-6836-4035-8968-08bfab276cc5",
+  "name": "Demo: all data types",
+  "tables": [
+    {
+      "id": "39fd4c58-24a9-4c57-be4f-12fee0c1cfce",
+      "name": "Samples",
+      "columns": [
+        {
+          "id": "0bb0736a-0e1c-4552-be97-6d1861153723",
+          "name": "number",
+          "type": "integer"
+        },
+        {
+          "id": "72a08356-10a7-48c5-8f57-67637ab8b522",
+          "name": "score",
+          "type": "real"
+        },
+        {
+          "id": "ff80634c-1a3a-46bb-a836-bc000087636d",
+          "name": "mark",
+          "type": "char"
+        },
+        {
+          "id": "f1aabc0b-5048-4342-af40-40200b776f48",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "id": "9646f005-d672-408f-8163-b933c02521ff",
+          "name": "shade",
+          "type": "color"
+        },
+        {
+          "id": "d528e64b-6480-4d77-8af4-08c171eb3a58",
+          "name": "range",
+          "type": "colorInvl"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c9374b4e-4f0a-4b93-8a8a-18f103da23a6",
+          "values": {
+            "number": 7,
+            "score": 98.5,
+            "mark": "A",
+            "title": "Sample",
+            "shade": {
+              "red": 64,
+              "green": 128,
+              "blue": 192
+            },
+            "range": {
+              "start": {
+                "red": 0,
+                "green": 20,
+                "blue": 40
+              },
+              "end": {
+                "red": 100,
+                "green": 150,
+                "blue": 200
+              }
+            }
+          }
+        },
+        {
+          "id": "ed39f10c-b3dd-4d19-99f5-7dc97d487945",
+          "values": {
+            "number": 7,
+            "score": 98.5,
+            "mark": "A",
+            "title": "Sample",
+            "shade": {
+              "red": 64,
+              "green": 128,
+              "blue": 192
+            },
+            "range": {
+              "start": {
+                "red": 0,
+                "green": 20,
+                "blue": 40
+              },
+              "end": {
+                "red": 100,
+                "green": 150,
+                "blue": 200
+              }
+            }
+          }
+        },
+        {
+          "id": "c732bc5f-fda8-4830-bfa6-57b9e55331bc",
+          "values": {
+            "number": 8,
+            "score": 98.5,
+            "mark": "B",
+            "title": "Another sample",
+            "shade": {
+              "red": 220,
+              "green": 90,
+              "blue": 40
+            },
+            "range": {
+              "start": {
+                "red": 0,
+                "green": 20,
+                "blue": 40
+              },
+              "end": {
+                "red": 100,
+                "green": 150,
+                "blue": 200
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
